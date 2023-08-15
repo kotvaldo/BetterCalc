@@ -6,24 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonNumber9"
         style="@style/Widget.AppCompat.Button.Small"
-        android:layout_width="98dp"
+        android:layout_width="wrap_content"
         android:layout_height="74dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
         android:text="Button"
         android:textColorHighlight="#6C4DA3"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonNumber"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonNumber6"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.386"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonNumber7"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.766"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonNumber8"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
 
     <View
         android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="280dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327" />
 </androidx.constraintlayout.widget.ConstraintLayout>
