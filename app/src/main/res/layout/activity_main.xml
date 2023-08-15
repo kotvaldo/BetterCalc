@@ -18,9 +18,9 @@
         <Button
             android:id="@+id/buttonNumber0"
             style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="0"
             android:textColorHighlight="#6C4DA3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,10 +30,10 @@
         <Button
             android:id="@+id/buttonNumber00"
             style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="74dp"
             android:layout_marginBottom="4dp"
-            android:text="Button"
+            android:text="00"
             android:textColorHighlight="#6C4DA3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +43,10 @@
         <Button
             android:id="@+id/buttonDot"
             style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="74dp"
             android:layout_marginBottom="4dp"
-            android:text="Button"
+            android:text=","
             android:textColorHighlight="#6C4DA3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,10 +56,10 @@
         <Button
             android:id="@+id/buttonEquals"
             style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="74dp"
             android:layout_marginBottom="4dp"
-            android:text="Button"
+            android:text="="
             android:textColorHighlight="#6C4DA3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -78,9 +78,9 @@
         <Button
             android:id="@+id/buttonNumber1"
             style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="1"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -89,7 +89,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="2"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -98,7 +98,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="3"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -107,7 +107,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="+"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -125,7 +125,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="4"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -134,7 +134,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="5"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -143,7 +143,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="6"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -152,7 +152,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="-"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -170,7 +170,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="7"
             android:textColorHighlight="#985A5A"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -179,7 +179,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="8"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -188,7 +188,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="9"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -197,7 +197,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="X"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -214,7 +214,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="C"
             android:textColorHighlight="#985A5A"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -223,7 +223,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="( )"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -232,7 +232,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="%"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -241,7 +241,7 @@
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
-            android:text="Button"
+            android:text="÷"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
