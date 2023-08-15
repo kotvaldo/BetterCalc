@@ -7,6 +7,67 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonNumber0"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonNumber00"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.386"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonDot"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.766"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonEquals"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:layout_marginBottom="4dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,66 +158,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/buttonNumber0"
-            style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:text="Button"
-            android:textColorHighlight="#6C4DA3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.051"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/buttonNumber00"
-            style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:layout_marginBottom="4dp"
-            android:text="Button"
-            android:textColorHighlight="#6C4DA3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.386"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/buttonDot"
-            style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:layout_marginBottom="4dp"
-            android:text="Button"
-            android:textColorHighlight="#6C4DA3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.766"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/buttonEquals"
-            style="@style/Widget.AppCompat.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="74dp"
-            android:layout_marginBottom="4dp"
-            android:text="Button"
-            android:textColorHighlight="#6C4DA3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" />
-    </LinearLayout>
-
-    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
@@ -169,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="74dp"
             android:text="Button"
-            android:textColorHighlight="#6C4DA3"
+            android:textColorHighlight="#985A5A"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
@@ -210,5 +211,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.458" />
 </androidx.constraintlayout.widget.ConstraintLayout>
