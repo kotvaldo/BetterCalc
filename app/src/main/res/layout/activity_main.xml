@@ -158,6 +158,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
@@ -192,6 +193,48 @@
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
+            android:id="@+id/buttonMult"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4">
+
+        <Button
+            android:id="@+id/buttonClear"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#985A5A"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonParnts"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonPerc"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
             android:id="@+id/buttonDiv"
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
@@ -211,5 +254,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.433" />
 </androidx.constraintlayout.widget.ConstraintLayout>
