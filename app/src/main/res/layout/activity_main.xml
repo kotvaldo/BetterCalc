@@ -6,16 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonNumber9"
-        style="@style/Widget.AppCompat.Button.Small"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="74dp"
-        android:text="Button"
-        android:textColorHighlight="#6C4DA3"
-        tools:layout_editor_absoluteY="570dp" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonNumber1"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonNumber2"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonNumber3"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+    </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonNumber4"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonNumber5"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonNumber6"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +105,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/buttonNumber"
+            android:id="@+id/buttonNumber0"
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
@@ -35,7 +117,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/buttonNumber6"
+            android:id="@+id/buttonNumber00"
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
@@ -48,7 +130,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/buttonNumber7"
+            android:id="@+id/buttonDot"
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
@@ -61,7 +143,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/buttonNumber8"
+            android:id="@+id/buttonEquals"
             style="@style/Widget.AppCompat.Button.Small"
             android:layout_width="wrap_content"
             android:layout_height="74dp"
@@ -74,6 +156,49 @@
             app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/buttonNumber7"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonNumber8"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonNumber9"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:text="Button"
+            android:textColorHighlight="#6C4DA3"
+            tools:layout_editor_absoluteY="570dp" />
+    </LinearLayout>
 
     <View
         android:id="@+id/divider"
@@ -82,7 +207,8 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintVertical_bias="0.499" />
 </androidx.constraintlayout.widget.ConstraintLayout>
