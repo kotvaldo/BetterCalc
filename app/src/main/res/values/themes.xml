@@ -6,6 +6,7 @@
 
     </style>
 
-    <style name="Theme.BetterCalc" parent="Base.Theme.BetterCalc"
-        />
+    <style name="Theme.BetterCalc" parent="Base.Theme.BetterCalc">
+        <item name="android:colorBackground"> @color/black </item>
+    </style>
 </resources>
