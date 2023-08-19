@@ -54,10 +54,9 @@
             android:layout_marginBottom="4dp"
             android:backgroundTint="@color/orange"
             android:text="="
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorHighlight="#F87400"
-            android:textSize="35sp"
-            android:textStyle="bold"
+            android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -95,7 +94,7 @@
 
         <Button
             android:id="@+id/buttonPlus"
-            style="@style/Button.Classic"
+            style="@style/Button.Orange"
             android:text="+"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
@@ -132,7 +131,7 @@
 
         <Button
             android:id="@+id/buttonMinus"
-            style="@style/Button.Classic"
+            style="@style/Button.Orange"
             android:text="-"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
@@ -169,8 +168,8 @@
 
         <Button
             android:id="@+id/buttonMult"
-            style="@style/Button.Classic"
-            android:text="X"
+            style="@style/Button.Orange"
+            android:text="x"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -184,28 +183,29 @@
 
         <Button
             android:id="@+id/buttonClear"
-            style="@style/Button.Classic"
-            android:text="C"
+            style="@style/Button.Orange"
+            android:text="ac"
             android:textColorHighlight="#985A5A"
             tools:layout_editor_absoluteY="570dp" />
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonParnts"
             style="@style/Button.Classic"
-            android:text="( )"
+            android:src="@drawable/backspace"
+            android:text=""
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonPerc"
-            style="@style/Button.Classic"
+            style="@style/Button.Orange"
             android:text="%"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonDiv"
-            style="@style/Button.Classic"
+            style="@style/Button.Orange"
             android:text="÷"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />

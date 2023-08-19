@@ -1,11 +1,4 @@
 <resources>
     <string name="app_name">BetterCalc</string>
-    <style name="Button.Classic" parent="Widget.AppCompat.Button.Borderless">
-        <item name="colorAccent">@color/orange</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">35sp</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:layout_height">74dp</item>
-        <item name="android:layout_width">100dp</item>
-    </style>
+
 </resources>
