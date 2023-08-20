@@ -21,7 +21,7 @@
             style="@style/Button.Classic"
             android:layout_width="100dp"
             android:layout_height="74dp"
-            android:text="0"
+            android:text="@string/stringNumber0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.051"
@@ -31,7 +31,7 @@
             android:id="@+id/buttonNumber00"
             style="@style/Button.Classic"
             android:layout_marginBottom="4dp"
-            android:text="00"
+            android:text="@string/stringNumber00"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.386"
@@ -41,7 +41,7 @@
             android:id="@+id/buttonDot"
             style="@style/Button.Classic"
             android:layout_marginBottom="4dp"
-            android:text=","
+            android:text="@string/stringDot"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.766"
@@ -54,7 +54,7 @@
             android:layout_height="74dp"
             android:layout_marginBottom="4dp"
             android:backgroundTint="@color/orange"
-            android:text="="
+            android:text="@string/stringEquals"
             android:textColor="@color/white"
             android:textColorHighlight="#F87400"
             android:textSize="30sp"
@@ -75,28 +75,28 @@
         <Button
             android:id="@+id/buttonNumber1"
             style="@style/Button.Classic"
-            android:text="1"
+            android:text="@string/stringNumberOne"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonNumber2"
             style="@style/Button.Classic"
-            android:text="2"
+            android:text="@string/stringNumberTwo"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonNumber3"
             style="@style/Button.Classic"
-            android:text="3"
+            android:text="@string/stringNumber3"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonPlus"
             style="@style/Button.Orange"
-            android:text="+"
+            android:text="@string/stringPlus"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -112,28 +112,28 @@
         <Button
             android:id="@+id/buttonNumber4"
             style="@style/Button.Classic"
-            android:text="4"
+            android:text="@string/stringNumber4"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonNumber5"
             style="@style/Button.Classic"
-            android:text="5"
+            android:text="@string/stringNumber5"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonNumber6"
             style="@style/Button.Classic"
-            android:text="6"
+            android:text="@string/stringNumber6"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonMinus"
             style="@style/Button.Orange"
-            android:text="-"
+            android:text="@string/stringMinus"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -149,28 +149,28 @@
         <Button
             android:id="@+id/buttonNumber7"
             style="@style/Button.Classic"
-            android:text="7"
+            android:text="@string/stringNumber7"
             android:textColorHighlight="#985A5A"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonNumber8"
             style="@style/Button.Classic"
-            android:text="8"
+            android:text="@string/stringNumber8"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonNumber9"
             style="@style/Button.Classic"
-            android:text="9"
+            android:text="@string/stringNumber9"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonMult"
             style="@style/Button.Orange"
-            android:text="x"
+            android:text="@string/stringMul"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -186,7 +186,7 @@
         <Button
             android:id="@+id/buttonClear"
             style="@style/Button.Orange"
-            android:text="AC"
+            android:text="@string/stringAC"
             android:textColorHighlight="#985A5A"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -200,14 +200,14 @@
         <Button
             android:id="@+id/buttonPerc"
             style="@style/Button.Orange"
-            android:text="%"
+            android:text="@string/stringPer"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
             android:id="@+id/buttonDiv"
             style="@style/Button.Orange"
-            android:text="÷"
+            android:text="@string/stringDiv"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
     </LinearLayout>
@@ -224,13 +224,13 @@
         <Button
             android:id="@+id/buttonMoreFunc"
             style="@style/Button.Higher"
-            android:text="..."
+            android:text="@string/stringMoreFun"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
         <Button
             android:id="@+id/buttonParent"
             style="@style/Button.Higher"
-            android:text="()"
+            android:text="@string/stringParent"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -239,15 +239,17 @@
             style="@style/Button.Higher"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp"
-            android:text="^"
+            android:text="@string/stringPower"
             />
 
-        <Button
-            android:id="@+id/buttonFraction"
-            style="@style/Button.Higher"
-            android:text="\u00BC"
-            android:textColorHighlight="#6C4DA3"
-            tools:layout_editor_absoluteY="570dp" />
+        <ImageButton
+            android:id="@+id/buttonBackwards"
+            style="@style/Button.Image"
+            android:layout_height="50dp"
+            tools:layout_editor_absoluteY="570dp"
+            android:src="@drawable/backwards"
+            android:visibility="invisible"
+            />
 
     </LinearLayout>
 

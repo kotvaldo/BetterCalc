@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">BetterCalc</string>
+    <string name="stringNumber0">0</string>
+    <string name="stringNumber00">00</string>
+    <string name="stringDot">,</string>
+    <string name="stringEquals">=</string>
+    <string name="stringNumberOne">1</string>
+    <string name="stringNumberTwo">2</string>
+    <string name="stringNumber3">3</string>
+    <string name="stringPlus">+</string>
+    <string name="stringNumber4">4</string>
+    <string name="stringNumber5">5</string>
+    <string name="stringNumber6">6</string>
+    <string name="stringMinus">-</string>
+    <string name="stringNumber7">7</string>
+    <string name="stringNumber8">8</string>
+    <string name="stringNumber9">9</string>
+    <string name="stringMul">x</string>
+    <string name="stringAC">AC</string>
+    <string name="stringPer">%</string>
+    <string name="stringDiv">÷</string>
+    <string name="stringMoreFun">...</string>
+    <string name="stringParent">()</string>
+    <string name="stringPower">^</string>
 
 </resources>
