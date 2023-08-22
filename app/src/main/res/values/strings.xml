@@ -22,5 +22,6 @@
     <string name="stringMoreFun">...</string>
     <string name="stringParent">()</string>
     <string name="stringPower">^</string>
+    <string name="backwards">Backwards</string>
 
 </resources>
