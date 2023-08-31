@@ -224,16 +224,16 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/buttonMoreFunc"
+            android:id="@+id/buttonLeftParent"
             style="@style/Button.Higher"
-            android:text="@string/stringMoreFun"
+            android:text="@string/stringLeftParent"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
         <Button
-            android:id="@+id/buttonParent"
+            android:id="@+id/buttonRightParent"
             style="@style/Button.Higher"
-            android:text="@string/stringParent"
+            android:text="@string/stringRightParent"
             android:textColorHighlight="#6C4DA3"
             tools:layout_editor_absoluteY="570dp" />
 
@@ -268,7 +268,7 @@
         app:layout_constraintVertical_bias="0.449" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/fullTextView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="10dp"
