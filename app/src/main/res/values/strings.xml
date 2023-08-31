@@ -20,7 +20,8 @@
     <string name="stringPer">%</string>
     <string name="stringDiv">÷</string>
     <string name="stringMoreFun">...</string>
-    <string name="stringParent">()</string>
+    <string name="stringParentRight">)</string>
+    <string name="stringParentLeft">(</string>
     <string name="stringPower">^</string>
     <string name="backwards">Backwards</string>
 
