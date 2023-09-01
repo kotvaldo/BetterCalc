@@ -18,17 +18,18 @@ class MainActivity : AppCompatActivity() {
     private val initialValue = "0"
 
     //Views
-    private var resultTextView:TextView = findViewById(R.id.resultView)
-    private var fullTextView:TextView = findViewById(R.id.fullTextView)
+    private lateinit var resultTextView:TextView
+    private lateinit var fullTextView:TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //resultText = initialValue
-        //updateDisplay()
-
-        /*val buttonZero: Button = findViewById(R.id.buttonNumber0)
+        resultText = initialValue
+        resultTextView = findViewById(R.id.resultView)
+        fullTextView = findViewById(R.id.fullTextView)
+        updateDisplay()
+        val buttonZero: Button = findViewById(R.id.buttonNumber0)
         val buttonZeroZero:Button = findViewById(R.id.buttonNumber00)
         val buttonOne:Button = findViewById(R.id.buttonNumber1)
         val buttonTwo:Button = findViewById(R.id.buttonNumber2)
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         val buttonParRight:Button = findViewById(R.id.buttonParentRight)
 
         buttonZero.setOnClickListener {addDigits("0")}
-        buttonZeroZero.setOnClickListener {addDigits("00")}*/
+        buttonZeroZero.setOnClickListener {addDigits("00")}
 
 
     }
@@ -62,6 +63,8 @@ class MainActivity : AppCompatActivity() {
         updateDisplay()
 
     }
+
+
     private fun updateDisplay() {
         resultTextView.text = resultText
     }
