@@ -5,11 +5,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import com.example.bettercalc.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
-
+    lateinit var binding: ActivityMainBinding
     //Basics
     private var result = 0
     private var partialResult = 0
@@ -24,36 +25,41 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         resultText = initialValue
-        resultTextView = findViewById(R.id.resultView)
-        fullTextView = findViewById(R.id.fullTextView)
+        resultTextView = binding.resultView
+        fullTextView = binding.fullTextView
         updateDisplay()
-        val buttonZero: Button = findViewById(R.id.buttonNumber0)
-        val buttonZeroZero:Button = findViewById(R.id.buttonNumber00)
-        val buttonOne:Button = findViewById(R.id.buttonNumber1)
-        val buttonTwo:Button = findViewById(R.id.buttonNumber2)
-        val buttonThree:Button = findViewById(R.id.buttonNumber3)
-        val buttonFour:Button = findViewById(R.id.buttonNumber4)
-        val buttonFive:Button = findViewById(R.id.buttonNumber5)
-        val buttonSix:Button = findViewById(R.id.buttonNumber6)
-        val buttonSeven:Button = findViewById(R.id.buttonNumber7)
-        val buttonEight:Button = findViewById(R.id.buttonNumber8)
-        val buttonNine:Button = findViewById(R.id.buttonNumber9)
+        val buttonZero: Button = binding.buttonNumber0
+        val buttonZeroZero:Button = binding.buttonNumber00
+        val buttonOne:Button = binding.buttonNumber1
+        val buttonTwo:Button = binding.buttonNumber2
+        val buttonThree:Button = binding.buttonNumber3
+        val buttonFour:Button = binding.buttonNumber4
+        val buttonFive:Button = binding.buttonNumber5
+        val buttonSix:Button = binding.buttonNumber6
+        val buttonSeven:Button = binding.buttonNumber7
+        val buttonEight:Button = binding.buttonNumber8
+        val buttonNine:Button = binding.buttonNumber9
 
-        val buttonPlus:Button = findViewById(R.id.buttonPlus)
-        val buttonMinus:Button = findViewById(R.id.buttonMinus)
-        val buttonMultiply:Button = findViewById(R.id.buttonMult)
-        val buttonDivide:Button = findViewById(R.id.buttonDiv)
-        val buttonDot:Button = findViewById(R.id.buttonDot)
+        val buttonPlus:Button = binding.buttonPlus
+        val buttonMinus:Button = binding.buttonMinus
+        val buttonMultiply:Button = binding.buttonMult
+        val buttonDivide:Button = binding.buttonDiv
+        val buttonDot:Button = binding.buttonDot
 
-        val buttonAC:Button = findViewById(R.id.buttonClear)
-        val buttonBackspace: ImageButton = findViewById(R.id.buttonBackspace)
-        val buttonParLeft:Button = findViewById(R.id.buttonParentLeft)
-        val buttonParRight:Button = findViewById(R.id.buttonParentRight)
+        val buttonAC:Button = binding.buttonClear
+        val buttonBackspace: ImageButton = binding.buttonBackspace
+        val buttonParLeft:Button = binding.buttonParentLeft
+        val buttonParRight:Button = binding.buttonParentRight
+        val buttonBackward: ImageButton = binding.buttonBackwards
 
         buttonZero.setOnClickListener {addDigits("0")}
         buttonZeroZero.setOnClickListener {addDigits("00")}
+        buttonOne.setOnClickListener {addDigits("1")  }
+        buttonTwo.setOnClickListener {addDigits("2")  }
 
 
     }
