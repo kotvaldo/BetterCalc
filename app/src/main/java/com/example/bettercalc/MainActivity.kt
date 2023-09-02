@@ -1,5 +1,6 @@
 package com.example.bettercalc
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,11 +11,13 @@ import com.example.bettercalc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     //Basics
-    private var result = 0
-    private var partialResult = 0
+
     private var resultText = ""
+    private var fullText = ""
+
+    private var isClear = true
 
     private val initialValue = "0"
 
@@ -65,9 +68,34 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addDigits(operation: String) {
-        resultText += operation
-        updateDisplay()
+        when (operation) {
+            "0" -> {
+                if(clearCheck()) {
 
+                } else {
+
+                }
+
+            }
+            "00" -> {
+
+
+            }
+
+            "AC" -> {
+
+
+            }
+
+            else -> {
+                if(clearCheck()) {
+
+                } else {
+
+                }
+
+            }
+        }
     }
 
 
@@ -76,8 +104,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clearDisplay() {
+        fullTextView.text == ""
+        resultTextView.currentTextColor == Color.WHITE
+        resultTextView.text == "0"
+        isClear = true;
 
 
+    }
+
+    private fun clearCheck() : Boolean {
+        if(isClear) return true
+        return false
     }
 
 }
