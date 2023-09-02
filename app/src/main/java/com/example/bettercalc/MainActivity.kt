@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private var fullText = ""
 
     private var isClear = true
+    private var isOperatorClicked = false
 
     private val initialValue = "0"
 
@@ -59,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         val buttonParRight:Button = binding.buttonParentRight
         val buttonBackward: ImageButton = binding.buttonBackwards
 
-        buttonZero.setOnClickListener {addDigits("0")}
+        buttonZero.  {addDigits("0")}
         buttonZeroZero.setOnClickListener {addDigits("00")}
         buttonOne.setOnClickListener {addDigits("1")  }
         buttonTwo.setOnClickListener {addDigits("2")  }
@@ -96,17 +97,23 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+
+        updateDisplay()
     }
 
 
     private fun updateDisplay() {
         resultTextView.text = resultText
+        fullTextView.text = fullText
     }
 
     private fun clearDisplay() {
-        fullTextView.text == ""
         resultTextView.currentTextColor == Color.WHITE
-        resultTextView.text == "0"
+        resultText = initialValue
+        fullText = ""
+
+        fullTextView.text == fullText
+        resultTextView.text == resultText
         isClear = true;
 
 
@@ -115,6 +122,15 @@ class MainActivity : AppCompatActivity() {
     private fun clearCheck() : Boolean {
         if(isClear) return true
         return false
+    }
+
+    private fun updateResult() {
+        if(isOperatorClicked) {
+
+        } else {
+
+        }
+
     }
 
 }
