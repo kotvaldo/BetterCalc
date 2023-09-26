@@ -5,4 +5,7 @@
     <color name="orange">#FF5900</color>
     <color name="dividerPrimary">#88FFFFFF</color>
     <color name="resultGrey">#656161</color>
+
+    <color name="textColorLight">@color/white</color>
+    <color name="textColorDark">@color/black</color>
 </resources>
