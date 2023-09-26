@@ -139,7 +139,7 @@ class Calculator : Fragment(), OnClickListener {
 
     }
     private fun findIndex(string: String ) : Int {
-
+        for (i in )
     }
     override fun onClick(v: View?) {
         when (v!!.id) {
@@ -165,7 +165,7 @@ class Calculator : Fragment(), OnClickListener {
             }
             R.id.buttonEquals -> {}
             R.id.buttonNumber1 -> { fullText += valueList[]}
-            R.id.buttonNumber2 -> {}
+            R.id.buttonNumber2 -> { fullText += valueList[]}
             R.id.buttonNumber3 -> {}
             R.id.buttonPlus -> {}
             R.id.buttonNumber4 -> {}
@@ -175,5 +175,7 @@ class Calculator : Fragment(), OnClickListener {
             R.id.buttonNumber0 -> {}
 
         }
+    updateDisplay()
+    updateResult()
     }
 }
