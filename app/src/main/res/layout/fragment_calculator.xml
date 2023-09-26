@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -19,49 +20,28 @@
         <Button
             android:id="@+id/buttonNumber0"
             style="@style/Button.Classic"
-            android:layout_width="100dp"
-            android:layout_height="74dp"
-            android:text="@string/stringNumber0"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.051"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="@string/stringNumber0" />
 
         <Button
             android:id="@+id/buttonNumber00"
             style="@style/Button.Classic"
-            android:layout_marginBottom="4dp"
-            android:text="@string/stringNumber00"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.386"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="@string/stringNumber00" />
 
         <Button
             android:id="@+id/buttonDot"
             style="@style/Button.Classic"
-            android:layout_marginBottom="4dp"
-            android:text="@string/stringDot"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.766"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="@string/stringDot" />
 
         <Button
             android:id="@+id/buttonEquals"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="100dp"
-            android:layout_height="74dp"
-            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:backgroundTint="@color/orange"
             android:text="@string/stringEquals"
             android:textColor="@color/white"
             android:textColorHighlight="#F87400"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -271,8 +251,8 @@
         android:id="@+id/fullTextView"
         android:layout_width="match_parent"
         android:layout_height="140dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/resultView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -282,13 +262,13 @@
         android:id="@+id/resultView"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginRight="20dp"
-        android:textSize="50sp"
-        android:text = "0"
-        android:textStyle=""
-        android:textColor="@color/white"
+        android:layout_marginBottom="8dp"
+        android:text="0"
         android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle=""
         app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
