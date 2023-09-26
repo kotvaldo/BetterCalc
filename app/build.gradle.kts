@@ -38,9 +38,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    ext {
-        navigationVersion = "2.3.0"
-    }
+
 }
 
 dependencies {

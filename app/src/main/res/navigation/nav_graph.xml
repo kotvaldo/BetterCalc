@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calculator">
+
+    <fragment
+        android:id="@+id/calculator"
+        android:name="com.example.bettercalc.Fragments.Calculator"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_calculator" />
+    <fragment
+        android:id="@+id/historyOfCalculator"
+        android:name="com.example.bettercalc.Fragments.HistoryOfCalculator"
+        android:label="fragment_history_of_calculator"
+        tools:layout="@layout/fragment_history_of_calculator" />
+    <fragment
+        android:id="@+id/moreFunctions"
+        android:name="com.example.bettercalc.Fragments.MoreFunctions"
+        android:label="fragment_more_functions"
+        tools:layout="@layout/fragment_more_functions" />
+    <fragment
+        android:id="@+id/scientificFuntions"
+        android:name="com.example.bettercalc.Fragments.ScientificFuntions"
+        android:label="fragment_scientific_funtions"
+        tools:layout="@layout/fragment_scientific_funtions" />
+</navigation>
