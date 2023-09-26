@@ -11,6 +11,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -171,6 +172,7 @@
         <ImageButton
             android:id="@+id/buttonBackspace"
             style="@style/Button.Classic"
+            android:layout_height="match_parent"
             android:importantForAccessibility="no"
             android:src="@drawable/backspace"
             tools:layout_editor_absoluteY="570dp" />
@@ -225,7 +227,7 @@
         <ImageButton
             android:id="@+id/buttonBackwards"
             style="@style/Button.Image"
-            android:layout_height="50dp"
+            android:layout_height="match_parent"
             android:contentDescription="@string/backwards"
             android:src="@drawable/backwards"
             android:visibility="invisible"
@@ -245,18 +247,19 @@
     <TextView
         android:id="@+id/fullTextView"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="0dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="10dp"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/resultView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/resultView"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="8dp"
         android:text="0"
