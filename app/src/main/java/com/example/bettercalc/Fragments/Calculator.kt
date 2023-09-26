@@ -42,7 +42,7 @@ class Calculator : Fragment(), OnClickListener {
         resultTextView = binding.resultView
         fullTextView = binding.fullTextView
         updateDisplay()
-        val buttonList = listOf<Button>(
+        val buttonList = listOf (
             binding.buttonNumber0,
             binding.buttonNumber00,
             binding.buttonDot,
@@ -65,16 +65,34 @@ class Calculator : Fragment(), OnClickListener {
             binding.buttonParentLeft,
             binding.buttonParentRight,
             binding.buttonPower,
-        ).forEach { it.setOnClickListener(this)
-            valueList.add(it.text.toString())
-        }
-
-        val imageButtons = listOf (
             binding.buttonBackwards,
             binding.buttonBackspace,
-        ).forEach {it.setOnClickListener(this) }
-        valueList.add("Backspace")
-        valueList.add("Backwards")
+        ).forEach { it.setOnClickListener(this)
+
+        }
+        valueList = arrayListOf(
+            "0",
+            "00",
+            ".",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "+",
+            "-",
+            "*",
+            "/",
+            "^",
+            "(",
+            ")",
+            "%",
+        )
+
 
 
         // Inflate the layout for this fragment
@@ -120,12 +138,14 @@ class Calculator : Fragment(), OnClickListener {
 
 
     }
+    private fun findIndex(string: String ) : Int {
 
+    }
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.buttonNumber0 -> {
                 if(!clearCheck()) {
-                    fullText += valueList[0]
+                    fullText += valueList[findIndex("0")]
                 } else {
 
                 }
@@ -144,7 +164,7 @@ class Calculator : Fragment(), OnClickListener {
 
             }
             R.id.buttonEquals -> {}
-            R.id.buttonNumber1 -> {}
+            R.id.buttonNumber1 -> { fullText += valueList[]}
             R.id.buttonNumber2 -> {}
             R.id.buttonNumber3 -> {}
             R.id.buttonPlus -> {}
