@@ -139,7 +139,13 @@ class Calculator : Fragment(), OnClickListener {
 
     }
     private fun findIndex(string: String ) : Int {
-        for (i in )
+        var index = 0
+        for(i in 0..valueList.size) {
+            if(string == valueList[i]) {
+                index = i
+            }
+        }
+        return index
     }
     override fun onClick(v: View?) {
         when (v!!.id) {
@@ -153,26 +159,32 @@ class Calculator : Fragment(), OnClickListener {
             }
             R.id.buttonNumber00 -> {
                 if(!clearCheck()) {
-                    fullText += valueList[1]
+                    fullText += valueList[findIndex("00")]
                 } else {
 
                 }
 
             }
             R.id.buttonDot -> {
-                fullText += valueList[2]
+                fullText += valueList[findIndex(".")]
 
             }
             R.id.buttonEquals -> {}
-            R.id.buttonNumber1 -> { fullText += valueList[]}
-            R.id.buttonNumber2 -> { fullText += valueList[]}
-            R.id.buttonNumber3 -> {}
-            R.id.buttonPlus -> {}
-            R.id.buttonNumber4 -> {}
-            R.id.buttonNumber5 -> {}
-            R.id.buttonNumber6 -> {}
-            R.id.buttonNumber0 -> {}
-            R.id.buttonNumber0 -> {}
+            R.id.buttonNumber1 -> { fullText += valueList[findIndex("1")]}
+            R.id.buttonNumber2 -> { fullText += valueList[findIndex("2")]}
+            R.id.buttonNumber3 -> { fullText += valueList[findIndex("3")]}
+            R.id.buttonNumber4 -> { fullText += valueList[findIndex("4")]}
+            R.id.buttonNumber5 -> { fullText += valueList[findIndex("5")]}
+            R.id.buttonNumber6 -> { fullText += valueList[findIndex("6")]}
+            R.id.buttonNumber7 -> { fullText += valueList[findIndex("7")]}
+            R.id.buttonNumber8 -> { fullText += valueList[findIndex("8")]}
+            R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
+
+           /* R.id.buttonPlus -> { fullText += valueList[findIndex("9")]}
+            R.id.buttonMinus -> { fullText += valueList[findIndex("9")]}
+            R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
+            R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
+            */
 
         }
     updateDisplay()
