@@ -152,7 +152,7 @@ class Calculator : Fragment(), OnClickListener {
                 if(clearCheck()) {
                     fullText += valueList[1]
                 } else {
-
+                    fullText += valueList[1]
                 }
 
             }
