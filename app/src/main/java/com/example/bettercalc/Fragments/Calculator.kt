@@ -65,7 +65,7 @@ class Calculator : Fragment(), OnClickListener {
             binding.buttonParentLeft,
             binding.buttonParentRight,
             binding.buttonPower,
-            binding.buttonBackwards,
+            binding.buttonMore,
             binding.buttonBackspace,
         ).forEach { it.setOnClickListener(this)
 
@@ -138,39 +138,35 @@ class Calculator : Fragment(), OnClickListener {
 
 
     }
-    private fun findIndex(string: String ) : Int {
-        var index = 0
-        for(i in 0..valueList.size) {
-            if(string == valueList[i]) {
-                index = i
-            }
-        }
-        return index
-    }
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.buttonNumber0 -> {
-                if(!clearCheck()) {
-                    fullText += valueList[findIndex("0")]
+                if(clearCheck()) {
+                    fullText += valueList[0]
                 } else {
 
                 }
 
             }
             R.id.buttonNumber00 -> {
-                if(!clearCheck()) {
-                    fullText += valueList[findIndex("00")]
+                if(clearCheck()) {
+                    fullText += valueList[1]
                 } else {
 
                 }
 
             }
             R.id.buttonDot -> {
-                fullText += valueList[findIndex(".")]
+                if(clearCheck()) {
+                    fullText += "0" + valueList[2]
+
+                } else {
+                    fullText += valueList[2]
+                }
 
             }
             R.id.buttonEquals -> {}
-            R.id.buttonNumber1 -> { fullText += valueList[findIndex("1")]}
+            /*R.id.buttonNumber1 -> { fullText += valueList[findIndex("1")]}
             R.id.buttonNumber2 -> { fullText += valueList[findIndex("2")]}
             R.id.buttonNumber3 -> { fullText += valueList[findIndex("3")]}
             R.id.buttonNumber4 -> { fullText += valueList[findIndex("4")]}
@@ -179,7 +175,7 @@ class Calculator : Fragment(), OnClickListener {
             R.id.buttonNumber7 -> { fullText += valueList[findIndex("7")]}
             R.id.buttonNumber8 -> { fullText += valueList[findIndex("8")]}
             R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
-
+            */
            /* R.id.buttonPlus -> { fullText += valueList[findIndex("9")]}
             R.id.buttonMinus -> { fullText += valueList[findIndex("9")]}
             R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
