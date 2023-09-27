@@ -6,6 +6,14 @@
     <color name="dividerPrimary">#88FFFFFF</color>
     <color name="resultGrey">#656161</color>
 
-    <color name="textColorLight">@color/white</color>
-    <color name="textColorDark">@color/black</color>
+    <color name="textColorLight">@color/black</color>
+    <color name="textColorDark">@color/white</color>
+
+    <!-- Barvy pro Bottom Navigation Bar v režimu Light -->
+    <color name="bottomNavBarLightBackground">#FFFFFF</color>
+    <color name="bottomNavBarLightIcon">#000000</color>
+
+    <!-- Barvy pro Bottom Navigation Bar v režimu Dark -->
+    <color name="bottomNavBarDarkBackground">#000000</color>
+    <color name="bottomNavBarDarkIcon">#FFFFFF</color>
 </resources>

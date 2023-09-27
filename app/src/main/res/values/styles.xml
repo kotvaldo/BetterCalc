@@ -4,7 +4,7 @@
     <style name="Button.Classic" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textAppearance">@style/TextAppearance.Dark</item>
+        <item name="android:textAppearance">@style/Theme.AppCompat.DayNight.NoActionBar</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
     </style>
@@ -31,6 +31,7 @@
 
     <style name="Button.Image" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:layout_height">wrap_content</item>
+
         <item name="android:layout_width">match_parent</item>
 
     </style>
@@ -47,13 +48,5 @@
         <item name="android:backgroundTint">@color/orange</item>
     </style>
 
-    <style name="TextAppearance.Light" parent="android:TextAppearance">
-        <item name="android:textColor">@color/textColorLight</item>
-        <!-- Další atributy stylu pro režim Light -->
-    </style>
-
-    <style name="TextAppearance.Dark" parent="android:TextAppearance">
-        <item name="android:textColor">@color/textColorDark</item>
-    </style>
 
 </resources>

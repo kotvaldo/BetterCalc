@@ -3,10 +3,20 @@
     <style name="Base.Theme.BetterCalc" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
     </style>
 
     <style name="Theme.BetterCalc" parent="Base.Theme.BetterCalc">
-
     </style>
+
+    <style name="TextAppearance.Light" parent="Theme.BetterCalc">
+        <item name="android:textColor">@color/textColorLight</item>
+        <!-- Další atributy stylu pro režim Light -->
+    </style>
+
+    <style name="TextAppearance.Dark" parent="Theme.BetterCalc">
+        <item name="android:textColor">@color/textColorDark</item>
+    </style>
+
+    <!-- Styl pro Bottom Navigation Bar v režimu Light -->
+
 </resources>
