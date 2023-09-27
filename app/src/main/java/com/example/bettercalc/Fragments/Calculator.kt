@@ -22,6 +22,8 @@ class Calculator : Fragment(), OnClickListener {
 
     private var valueList = arrayListOf<String>()
 
+    private var wasDotClicked = false
+
     private var resultText = ""
     private var fullText = ""
     private var isOperatorClicked = false
@@ -74,15 +76,6 @@ class Calculator : Fragment(), OnClickListener {
             "0",
             "00",
             ".",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
             "+",
             "-",
             "*",
@@ -141,7 +134,7 @@ class Calculator : Fragment(), OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.buttonNumber0 -> {
-                if(clearCheck()) {
+                if(!clearCheck()) {
                     fullText += valueList[0]
                 } else {
 
@@ -149,38 +142,50 @@ class Calculator : Fragment(), OnClickListener {
 
             }
             R.id.buttonNumber00 -> {
-                if(clearCheck()) {
+                if(!clearCheck()) {
                     fullText += valueList[1]
                 } else {
-                    fullText += valueList[1]
                 }
 
             }
             R.id.buttonDot -> {
                 if(clearCheck()) {
-                    fullText += "0" + valueList[2]
-
+                    if(!wasDotClicked) {
+                        fullText += "0" + valueList[2]
+                        wasDotClicked = !wasDotClicked
+                    }
                 } else {
-                    fullText += valueList[2]
+                    if(!wasDotClicked) {
+                        fullText += "0" + valueList[2]
+                        wasDotClicked = !wasDotClicked
+                    }
                 }
 
             }
             R.id.buttonEquals -> {}
-            /*R.id.buttonNumber1 -> { fullText += valueList[findIndex("1")]}
-            R.id.buttonNumber2 -> { fullText += valueList[findIndex("2")]}
-            R.id.buttonNumber3 -> { fullText += valueList[findIndex("3")]}
-            R.id.buttonNumber4 -> { fullText += valueList[findIndex("4")]}
-            R.id.buttonNumber5 -> { fullText += valueList[findIndex("5")]}
-            R.id.buttonNumber6 -> { fullText += valueList[findIndex("6")]}
-            R.id.buttonNumber7 -> { fullText += valueList[findIndex("7")]}
-            R.id.buttonNumber8 -> { fullText += valueList[findIndex("8")]}
-            R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
-            */
-           /* R.id.buttonPlus -> { fullText += valueList[findIndex("9")]}
-            R.id.buttonMinus -> { fullText += valueList[findIndex("9")]}
-            R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
-            R.id.buttonNumber9 -> { fullText += valueList[findIndex("9")]}
-            */
+            R.id.buttonNumber1 -> { fullText += "1"}
+            R.id.buttonNumber2 -> { fullText += "2"}
+            R.id.buttonNumber3 -> { fullText += "3"}
+            R.id.buttonNumber4 -> { fullText += "4"}
+            R.id.buttonNumber5 -> { fullText += "5"}
+            R.id.buttonNumber6 -> { fullText += "6"}
+            R.id.buttonNumber7 -> { fullText += "7"}
+            R.id.buttonNumber8 -> { fullText += "8"}
+            R.id.buttonNumber9 -> { fullText += "9"}
+
+
+            
+            R.id.buttonPlus -> { fullText += valueList[3]}
+            R.id.buttonMinus -> { fullText += valueList[4]}
+            R.id.buttonMult -> { fullText += valueList[5]}
+            R.id.buttonDiv  -> { fullText += valueList[6]}
+            R.id.buttonPower  -> { fullText += valueList[7]}
+            R.id.buttonParentLeft  -> { fullText += valueList[8]}
+            R.id.buttonParentRight  -> { fullText += valueList[9]}
+            R.id.buttonPerc  -> { fullText += valueList[10]}
+
+            R.id.buttonClear -> { clearDisplay() }
+
 
         }
     updateDisplay()
