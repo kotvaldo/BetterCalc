@@ -216,8 +216,19 @@ class Calculator : Fragment(), OnClickListener {
 
             R.id.buttonPlus -> {
                 if (isOperatorClicked) {
+                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText += operatorsValue[0]
+
+                } else {
 
                     fullText += operatorsValue[0]
+                }
+            }
+
+            R.id.buttonMinus -> {
+                if (isOperatorClicked) {
+                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText += operatorsValue[1]
 
                 } else {
 
@@ -225,16 +236,26 @@ class Calculator : Fragment(), OnClickListener {
                 }
             }
 
-            R.id.buttonMinus -> {
-                fullText += operatorsValue[2]
-            }
-
             R.id.buttonMult -> {
-                fullText += operatorsValue[3]
+                if (isOperatorClicked) {
+                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText += operatorsValue[2]
+
+                } else {
+
+                    fullText += operatorsValue[2]
+                }
             }
 
             R.id.buttonDiv -> {
-                fullText += operatorsValue[4]
+                if (isOperatorClicked) {
+                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText += operatorsValue[3]
+
+                } else {
+
+                    fullText += operatorsValue[3]
+                }
             }
 
             R.id.buttonPower -> {
