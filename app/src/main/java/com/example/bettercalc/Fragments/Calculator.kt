@@ -21,7 +21,7 @@ class Calculator : Fragment(), OnClickListener {
     //Basics //Basics
 
     private var valueList = arrayListOf<String>()
-
+    private var operatorsValue = arrayListOf<String>()
     private var wasDotClicked = false
 
     private var resultText = ""
@@ -44,7 +44,7 @@ class Calculator : Fragment(), OnClickListener {
         resultTextView = binding.resultView
         fullTextView = binding.fullTextView
         updateDisplay()
-        val buttonList = listOf (
+        val buttonList = listOf(
             binding.buttonNumber0,
             binding.buttonNumber00,
             binding.buttonDot,
@@ -69,33 +69,43 @@ class Calculator : Fragment(), OnClickListener {
             binding.buttonPower,
             binding.buttonMore,
             binding.buttonBackspace,
-        ).forEach { it.setOnClickListener(this)
+        ).forEach {
+            it.setOnClickListener(this)
 
         }
         valueList = arrayListOf(
             "0",
             "00",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "(",
+            ")",
+        )
+
+        operatorsValue = arrayListOf(
             ".",
             "+",
             "-",
             "*",
             "/",
             "^",
-            "(",
-            ")",
             "%",
         )
-
-
 
         // Inflate the layout for this fragment
         return binding.root
     }
 
 
-
     private fun updateDisplay() {
-        if(clearCheck()) {
+        if (clearCheck()) {
             resultTextView.text = resultText
         } else resultTextView.text = "= $resultText"
         fullTextView.text = fullText
@@ -116,7 +126,7 @@ class Calculator : Fragment(), OnClickListener {
     }
 
     private fun updateResult() {
-        if(clearCheck()) {
+        if (clearCheck()) {
 
         } else {
             resultTextView.currentTextColor == Color.GRAY
@@ -125,70 +135,131 @@ class Calculator : Fragment(), OnClickListener {
             if (isOperatorClicked) {
 
             } else {
-
+                resultText = "= $fullText"
             }
         }
 
 
     }
+
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.buttonNumber0 -> {
-                if(!clearCheck()) {
+                if (!clearCheck()) {
                     fullText += valueList[0]
                 } else {
 
                 }
 
             }
+
             R.id.buttonNumber00 -> {
-                if(!clearCheck()) {
+                if (!clearCheck()) {
                     fullText += valueList[1]
                 } else {
                 }
 
             }
+
             R.id.buttonDot -> {
-                if(clearCheck()) {
-                    if(!wasDotClicked) {
+                if (clearCheck()) {
+                    if (!wasDotClicked) {
                         fullText += "0" + valueList[2]
                         wasDotClicked = !wasDotClicked
                     }
                 } else {
-                    if(!wasDotClicked) {
+                    if (!wasDotClicked) {
                         fullText += "0" + valueList[2]
                         wasDotClicked = !wasDotClicked
                     }
                 }
 
             }
+
             R.id.buttonEquals -> {}
-            R.id.buttonNumber1 -> { fullText += "1"}
-            R.id.buttonNumber2 -> { fullText += "2"}
-            R.id.buttonNumber3 -> { fullText += "3"}
-            R.id.buttonNumber4 -> { fullText += "4"}
-            R.id.buttonNumber5 -> { fullText += "5"}
-            R.id.buttonNumber6 -> { fullText += "6"}
-            R.id.buttonNumber7 -> { fullText += "7"}
-            R.id.buttonNumber8 -> { fullText += "8"}
-            R.id.buttonNumber9 -> { fullText += "9"}
+            R.id.buttonNumber1 -> {
+                fullText += valueList[2]
+            }
+
+            R.id.buttonNumber2 -> {
+                fullText += valueList[3]
+            }
+
+            R.id.buttonNumber3 -> {
+                fullText += valueList[4]
+            }
+
+            R.id.buttonNumber4 -> {
+                fullText += valueList[5]
+            }
+
+            R.id.buttonNumber5 -> {
+                fullText += valueList[6]
+            }
+
+            R.id.buttonNumber6 -> {
+                fullText += valueList[7]
+            }
+
+            R.id.buttonNumber7 -> {
+                fullText += valueList[8]
+            }
+
+            R.id.buttonNumber8 -> {
+                fullText += valueList[9]
+            }
+
+            R.id.buttonNumber9 -> {
+                fullText += valueList[10]
+            }
 
 
-            
-            R.id.buttonPlus -> { fullText += valueList[3]}
-            R.id.buttonMinus -> { fullText += valueList[4]}
-            R.id.buttonMult -> { fullText += valueList[5]}
-            R.id.buttonDiv  -> { fullText += valueList[6]}
-            R.id.buttonPower  -> { fullText += valueList[7]}
-            R.id.buttonParentLeft  -> { fullText += valueList[8]}
-            R.id.buttonParentRight  -> { fullText += valueList[9]}
-            R.id.buttonPerc  -> { fullText += valueList[10]}
+            R.id.buttonPlus -> {
+                if (isOperatorClicked) {
 
-            R.id.buttonClear -> { clearDisplay() }
+                    fullText += operatorsValue[0]
+
+                } else {
+
+                    fullText += operatorsValue[1]
+                }
+            }
+
+            R.id.buttonMinus -> {
+                fullText += operatorsValue[2]
+            }
+
+            R.id.buttonMult -> {
+                fullText += operatorsValue[3]
+            }
+
+            R.id.buttonDiv -> {
+                fullText += operatorsValue[4]
+            }
+
+            R.id.buttonPower -> {
+                fullText += operatorsValue[5]
+            }
+
+            R.id.buttonParentLeft -> {
+                fullText += valueList[11]
+            }
+
+            R.id.buttonParentRight -> {
+                fullText += valueList[12]
+            }
+
+            R.id.buttonPerc -> {
+                fullText += operatorsValue[6]
+            }
+
+            R.id.buttonClear -> {
+                clearDisplay()
+            }
 
 
         }
-    updateDisplay()
-    updateResult()
+        updateDisplay()
+        updateResult()
     }
 }
