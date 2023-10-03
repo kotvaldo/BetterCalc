@@ -87,10 +87,10 @@ class Calculator : Fragment(), OnClickListener {
             "9",
             "(",
             ")",
+            ".",
         )
 
         operatorsValue = arrayListOf(
-            ".",
             "+",
             "-",
             "*",
@@ -164,12 +164,12 @@ class Calculator : Fragment(), OnClickListener {
             R.id.buttonDot -> {
                 if (clearCheck()) {
                     if (!wasDotClicked) {
-                        fullText += "0" + valueList[2]
+                        fullText += "0" + valueList[13]
                         wasDotClicked = !wasDotClicked
                     }
                 } else {
                     if (!wasDotClicked) {
-                        fullText += "0" + valueList[2]
+                        fullText += "0" + valueList[13]
                         wasDotClicked = !wasDotClicked
                     }
                 }
