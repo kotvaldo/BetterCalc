@@ -105,9 +105,6 @@ class Calculator : Fragment(), OnClickListener {
 
 
     private fun updateDisplay() {
-        if (clearCheck()) {
-            resultTextView.text = resultText
-        } else resultTextView.text = "= $resultText"
         fullTextView.text = fullText
     }
 
@@ -130,12 +127,10 @@ class Calculator : Fragment(), OnClickListener {
 
         } else {
             resultTextView.currentTextColor == Color.GRAY
-            fullTextView.currentTextColor == Color.WHITE
-
             if (isOperatorClicked) {
 
             } else {
-                resultText = "= $fullText"
+                resultText = fullText
             }
         }
 
@@ -216,50 +211,68 @@ class Calculator : Fragment(), OnClickListener {
 
             R.id.buttonPlus -> {
                 if (isOperatorClicked) {
-                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText = fullText.dropLast(1)
                     fullText += operatorsValue[0]
 
                 } else {
-
+                    isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[0]
                 }
             }
 
             R.id.buttonMinus -> {
                 if (isOperatorClicked) {
-                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText = fullText.dropLast(1)
                     fullText += operatorsValue[1]
 
                 } else {
-
+                    isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[1]
                 }
             }
 
             R.id.buttonMult -> {
                 if (isOperatorClicked) {
-                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText = fullText.dropLast(1)
                     fullText += operatorsValue[2]
 
                 } else {
-
+                    isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[2]
                 }
             }
 
             R.id.buttonDiv -> {
                 if (isOperatorClicked) {
-                    fullText.removeRange(fullText.length-1, fullText.length)
+                    fullText = fullText.dropLast(1)
                     fullText += operatorsValue[3]
 
                 } else {
-
+                    isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[3]
                 }
             }
 
             R.id.buttonPower -> {
-                fullText += operatorsValue[5]
+                if (isOperatorClicked) {
+                    fullText = fullText.dropLast(1)
+                    fullText += operatorsValue[4]
+
+                } else {
+                    isOperatorClicked = !isOperatorClicked
+                    fullText += operatorsValue[4]
+                }
+            }
+
+            R.id.buttonPerc -> {
+                if (isOperatorClicked) {
+                    fullText = fullText.dropLast(1)
+                    fullText += operatorsValue[5]
+
+                } else {
+                    isOperatorClicked = !isOperatorClicked
+                    fullText += operatorsValue[5]
+                }
             }
 
             R.id.buttonParentLeft -> {
@@ -270,17 +283,16 @@ class Calculator : Fragment(), OnClickListener {
                 fullText += valueList[12]
             }
 
-            R.id.buttonPerc -> {
-                fullText += operatorsValue[6]
-            }
 
             R.id.buttonClear -> {
                 clearDisplay()
             }
 
+            R.id.buttonBackspace -> {
+                fullText = fullText.dropLast(1)
+            }
 
         }
         updateDisplay()
-        updateResult()
     }
 }
