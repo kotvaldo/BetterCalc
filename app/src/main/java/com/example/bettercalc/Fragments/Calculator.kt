@@ -102,9 +102,6 @@ class Calculator : Fragment(), OnClickListener {
 
 
     private fun updateDisplay() {
-        if (clearCheck()) {
-            resultTextView.currentTextColor == Color.GRAY
-        }
         fullTextView.text = fullText
     }
 
