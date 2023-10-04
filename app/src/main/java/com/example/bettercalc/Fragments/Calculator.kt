@@ -101,7 +101,7 @@ class Calculator : Fragment(), OnClickListener {
 
 
     private fun updateDisplay() {
-        if(clearCheck()) {
+        if (clearCheck()) {
             resultTextView.currentTextColor == Color.GRAY
         }
         fullTextView.text = fullText
@@ -156,14 +156,9 @@ class Calculator : Fragment(), OnClickListener {
             }
 
             R.id.buttonDot -> {
-                if (clearCheck()) {
-                    if (!wasDotClicked) {
-                        fullText += "0" + valueList[13]
-                        wasDotClicked = !wasDotClicked
-                    }
-                } else {
-                    if (!wasDotClicked) {
-                        fullText += "0" + valueList[13]
+                if(!clearCheck()) {
+                    if (!wasDotClicked && !isOperatorClicked) {
+                        fullText += valueList[13]
                         wasDotClicked = !wasDotClicked
                     }
                 }
@@ -173,42 +168,64 @@ class Calculator : Fragment(), OnClickListener {
             R.id.buttonEquals -> {}
             R.id.buttonNumber1 -> {
                 fullText += valueList[2]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber2 -> {
                 fullText += valueList[3]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber3 -> {
                 fullText += valueList[4]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber4 -> {
                 fullText += valueList[5]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber5 -> {
                 fullText += valueList[6]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber6 -> {
                 fullText += valueList[7]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber7 -> {
                 fullText += valueList[8]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber8 -> {
                 fullText += valueList[9]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
             R.id.buttonNumber9 -> {
                 fullText += valueList[10]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (wasDotClicked) wasDotClicked = !wasDotClicked
             }
 
 
             R.id.buttonPlus -> {
+                if(wasDotClicked) {
+                    fullText += "0"
+                    wasDotClicked = false
+                }
                 if (isOperatorClicked) {
                     fullText = fullText.dropLast(1)
                     fullText += operatorsValue[0]
@@ -217,9 +234,14 @@ class Calculator : Fragment(), OnClickListener {
                     isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[0]
                 }
+
             }
 
             R.id.buttonMinus -> {
+                if(wasDotClicked) {
+                    fullText += "0"
+                    wasDotClicked = false
+                }
                 if (isOperatorClicked) {
                     fullText = fullText.dropLast(1)
                     fullText += operatorsValue[1]
@@ -228,9 +250,14 @@ class Calculator : Fragment(), OnClickListener {
                     isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[1]
                 }
+
             }
 
             R.id.buttonMult -> {
+                if(wasDotClicked) {
+                    fullText += "0"
+                    wasDotClicked = false
+                }
                 if (isOperatorClicked) {
                     fullText = fullText.dropLast(1)
                     fullText += operatorsValue[2]
@@ -242,6 +269,10 @@ class Calculator : Fragment(), OnClickListener {
             }
 
             R.id.buttonDiv -> {
+                if(wasDotClicked) {
+                    fullText += "0"
+                    wasDotClicked = false
+                }
                 if (isOperatorClicked) {
                     fullText = fullText.dropLast(1)
                     fullText += operatorsValue[3]
@@ -253,6 +284,10 @@ class Calculator : Fragment(), OnClickListener {
             }
 
             R.id.buttonPower -> {
+                if(wasDotClicked) {
+                    fullText += "0"
+                    wasDotClicked = false
+                }
                 if (isOperatorClicked) {
                     fullText = fullText.dropLast(1)
                     fullText += operatorsValue[4]
@@ -264,6 +299,10 @@ class Calculator : Fragment(), OnClickListener {
             }
 
             R.id.buttonPerc -> {
+                if(wasDotClicked) {
+                    fullText += "0"
+                    wasDotClicked = false
+                }
                 if (isOperatorClicked) {
                     fullText = fullText.dropLast(1)
                     fullText += operatorsValue[5]
@@ -276,10 +315,12 @@ class Calculator : Fragment(), OnClickListener {
 
             R.id.buttonParentLeft -> {
                 fullText += valueList[11]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
             }
 
             R.id.buttonParentRight -> {
                 fullText += valueList[12]
+                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
             }
 
 
