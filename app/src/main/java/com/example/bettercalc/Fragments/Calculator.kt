@@ -63,7 +63,7 @@ class Calculator : Fragment(), OnClickListener {
             binding.buttonParentLeft,
             binding.buttonParentRight,
             binding.buttonPower,
-            binding.buttonMore,
+            binding.buttonSqrt,
             binding.buttonBackspace,
         ).forEach {
             it.setOnClickListener(this)
@@ -93,6 +93,7 @@ class Calculator : Fragment(), OnClickListener {
             "/",
             "^",
             "%",
+            "√"
         )
 
         // Inflate the layout for this fragment
@@ -311,6 +312,22 @@ class Calculator : Fragment(), OnClickListener {
                     isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[5]
                 }
+            }
+
+            R.id.buttonSqrt -> {
+                if(wasDotClicked) {
+                    fullText += "0"
+                    wasDotClicked = false
+                }
+                if (isOperatorClicked) {
+                    fullText = fullText.dropLast(1)
+                    fullText += operatorsValue[6]
+
+                } else {
+                    isOperatorClicked = !isOperatorClicked
+                    fullText += operatorsValue[6]
+                }
+
             }
 
             R.id.buttonParentLeft -> {

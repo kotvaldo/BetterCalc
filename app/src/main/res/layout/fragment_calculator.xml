@@ -84,12 +84,12 @@
                 android:textColorHighlight="#6C4DA3"
                 tools:ignore="VisualLintButtonSize" />
 
-            <ImageButton
-                android:id="@+id/buttonMore"
-                style="@style/Button.Image"
+            <Button
+                android:id="@+id/buttonSqrt"
+                style="@style/Button.Higher"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/baseline_more_vert_24"
+                android:text="√"
                 tools:ignore="VisualLintButtonSize,SpeakableTextPresentCheck"
                 android:contentDescription="TODO" />
 
