@@ -1,6 +1,5 @@
-package com.example.bettercalc.Fragments
+package com.example.bettercalc.fragments
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -25,6 +24,7 @@ class Calculator : Fragment(), OnClickListener {
     private var isOperatorClicked = false
 
     private val initialValue = "0"
+
 
     //Views
     private lateinit var resultTextView: TextView
@@ -106,7 +106,6 @@ class Calculator : Fragment(), OnClickListener {
     }
 
     private fun clearDisplay() {
-        resultTextView.currentTextColor == Color.WHITE
         resultText = initialValue
         fullText = ""
         updateDisplay()
@@ -119,45 +118,47 @@ class Calculator : Fragment(), OnClickListener {
         return false
     }
 
-    private fun updateResult() {
-        if (clearCheck()) {
-
-        } else {
-            resultTextView.currentTextColor == Color.GRAY
-            if (isOperatorClicked) {
-
-            } else {
-                resultText = fullText
-            }
-        }
+    private fun makeResult() {
 
 
     }
 
+    private fun controlPar(fullText:String) : Boolean {
+        val stack = mutableListOf<Int>()
+
+        for ((i, charT:Char) in fullText.withIndex()) {
+            when (charT) {
+                '(' -> stack.add(i)
+                ')' -> {
+                    if (stack.isEmpty()) {
+                        return false
+                    }
+                    stack.removeAt(stack.size - 1)
+                }
+            }
+        }
+        return stack.isEmpty()
+    }
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.buttonNumber0 -> {
                 if (!clearCheck()) {
                     fullText += valueList[0]
-                } else {
-
                 }
-
             }
 
             R.id.buttonNumber00 -> {
                 if (!clearCheck()) {
                     fullText += valueList[1]
-                } else {
                 }
 
             }
 
             R.id.buttonDot -> {
-                if(!clearCheck()) {
+                if (!clearCheck()) {
                     if (!wasDotClicked && !isOperatorClicked) {
                         fullText += valueList[13]
-                        wasDotClicked = !wasDotClicked
+                        wasDotClicked = true
                     }
                 }
 
@@ -166,61 +167,61 @@ class Calculator : Fragment(), OnClickListener {
             R.id.buttonEquals -> {}
             R.id.buttonNumber1 -> {
                 fullText += valueList[2]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber2 -> {
                 fullText += valueList[3]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber3 -> {
                 fullText += valueList[4]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber4 -> {
                 fullText += valueList[5]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber5 -> {
                 fullText += valueList[6]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber6 -> {
                 fullText += valueList[7]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber7 -> {
                 fullText += valueList[8]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber8 -> {
                 fullText += valueList[9]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
             R.id.buttonNumber9 -> {
                 fullText += valueList[10]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
-                if (wasDotClicked) wasDotClicked = !wasDotClicked
+                if (isOperatorClicked) isOperatorClicked = false
+                if (wasDotClicked) wasDotClicked = false
             }
 
 
             R.id.buttonPlus -> {
-                if(wasDotClicked) {
+                if (wasDotClicked) {
                     fullText += "0"
                     wasDotClicked = false
                 }
@@ -229,14 +230,14 @@ class Calculator : Fragment(), OnClickListener {
                     fullText += operatorsValue[0]
 
                 } else {
-                    isOperatorClicked = !isOperatorClicked
                     fullText += operatorsValue[0]
+                    isOperatorClicked = true
                 }
 
             }
 
             R.id.buttonMinus -> {
-                if(wasDotClicked) {
+                if (wasDotClicked) {
                     fullText += "0"
                     wasDotClicked = false
                 }
@@ -245,14 +246,14 @@ class Calculator : Fragment(), OnClickListener {
                     fullText += operatorsValue[1]
 
                 } else {
-                    isOperatorClicked = !isOperatorClicked
+                    isOperatorClicked = true
                     fullText += operatorsValue[1]
                 }
 
             }
 
             R.id.buttonMult -> {
-                if(wasDotClicked) {
+                if (wasDotClicked) {
                     fullText += "0"
                     wasDotClicked = false
                 }
@@ -261,13 +262,13 @@ class Calculator : Fragment(), OnClickListener {
                     fullText += operatorsValue[2]
 
                 } else {
-                    isOperatorClicked = !isOperatorClicked
+                    isOperatorClicked = true
                     fullText += operatorsValue[2]
                 }
             }
 
             R.id.buttonDiv -> {
-                if(wasDotClicked) {
+                if (wasDotClicked) {
                     fullText += "0"
                     wasDotClicked = false
                 }
@@ -276,13 +277,13 @@ class Calculator : Fragment(), OnClickListener {
                     fullText += operatorsValue[3]
 
                 } else {
-                    isOperatorClicked = !isOperatorClicked
+                    isOperatorClicked = true
                     fullText += operatorsValue[3]
                 }
             }
 
             R.id.buttonPower -> {
-                if(wasDotClicked) {
+                if (wasDotClicked) {
                     fullText += "0"
                     wasDotClicked = false
                 }
@@ -291,13 +292,13 @@ class Calculator : Fragment(), OnClickListener {
                     fullText += operatorsValue[4]
 
                 } else {
-                    isOperatorClicked = !isOperatorClicked
+                    isOperatorClicked = true
                     fullText += operatorsValue[4]
                 }
             }
 
             R.id.buttonPerc -> {
-                if(wasDotClicked) {
+                if (wasDotClicked) {
                     fullText += "0"
                     wasDotClicked = false
                 }
@@ -306,13 +307,13 @@ class Calculator : Fragment(), OnClickListener {
                     fullText += operatorsValue[5]
 
                 } else {
-                    isOperatorClicked = !isOperatorClicked
+                    isOperatorClicked = true
                     fullText += operatorsValue[5]
                 }
             }
 
             R.id.buttonSqrt -> {
-                if(wasDotClicked) {
+                if (wasDotClicked) {
                     fullText += "0"
                     wasDotClicked = false
                 }
@@ -321,7 +322,7 @@ class Calculator : Fragment(), OnClickListener {
                     fullText += operatorsValue[6]
 
                 } else {
-                    isOperatorClicked = !isOperatorClicked
+                    isOperatorClicked = true
                     fullText += operatorsValue[6]
                 }
 
@@ -329,12 +330,12 @@ class Calculator : Fragment(), OnClickListener {
 
             R.id.buttonParentLeft -> {
                 fullText += valueList[11]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (isOperatorClicked) isOperatorClicked = false
             }
 
             R.id.buttonParentRight -> {
                 fullText += valueList[12]
-                if (isOperatorClicked) isOperatorClicked = !isOperatorClicked
+                if (isOperatorClicked) isOperatorClicked = false
             }
 
 
@@ -348,6 +349,5 @@ class Calculator : Fragment(), OnClickListener {
 
         }
         updateDisplay()
-        updateResult()
     }
 }

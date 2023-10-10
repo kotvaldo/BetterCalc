@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".Fragments.Calculator">
+    tools:context=".fragments.Calculator">
 
     <ScrollView
         android:layout_width="0dp"
@@ -308,14 +308,14 @@
 
             <Button
                 android:id="@+id/buttonEquals"
-                style="?android:attr/buttonBarButtonStyle"
+                style="@style/Widget.Material3.Button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/orange"
                 android:text="@string/stringEquals"
                 android:textColor="@color/white"
-                android:textColorHighlight="#F87400"
+                android:textColorHighlight="@color/orange"
                 android:textSize="30sp"
                 tools:ignore="VisualLintButtonSize" />
         </LinearLayout>
