@@ -6,6 +6,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.bettercalc.R
 import com.example.bettercalc.databinding.FragmentCalculatorBinding
@@ -22,6 +23,7 @@ class Calculator : Fragment(), OnClickListener {
     private var resultText = ""
     private var fullText = ""
     private var isOperatorClicked = false
+    private var isLeftParentClicked = false
 
     private val initialValue = "0"
 
@@ -119,15 +121,31 @@ class Calculator : Fragment(), OnClickListener {
     }
 
     private fun makeResult() {
+        if(controlAllText(fullText)) {
 
+
+        }
 
     }
 
-    private fun controlPar(fullText:String) : Boolean {
+    private fun updateResult() {
+        resultTextView.text = resultText
+    }
+    private fun controlAllText(fullText: String) : Boolean {
+        if(!controlParent(fullText)) {
+            Toast.makeText(requireContext(), "Syntax Error", Toast.LENGTH_SHORT)
+            return false
+        }
+
+
+        return true
+    }
+
+    private fun controlParent(fullText:String) : Boolean {
         val stack = mutableListOf<Int>()
 
-        for ((i, charT:Char) in fullText.withIndex()) {
-            when (charT) {
+        for (i in fullText.indices) {
+            when (fullText[i]) {
                 '(' -> stack.add(i)
                 ')' -> {
                     if (stack.isEmpty()) {
@@ -160,11 +178,13 @@ class Calculator : Fragment(), OnClickListener {
                         fullText += valueList[13]
                         wasDotClicked = true
                     }
+                } else {
+                    fullText += "0" + valueList[13]
+                    wasDotClicked = true
                 }
 
             }
 
-            R.id.buttonEquals -> {}
             R.id.buttonNumber1 -> {
                 fullText += valueList[2]
                 if (isOperatorClicked) isOperatorClicked = false
@@ -329,13 +349,24 @@ class Calculator : Fragment(), OnClickListener {
             }
 
             R.id.buttonParentLeft -> {
-                fullText += valueList[11]
-                if (isOperatorClicked) isOperatorClicked = false
+                if(!isLeftParentClicked) {
+                    if (isOperatorClicked) {
+                        isOperatorClicked = false
+                        fullText += valueList[11]
+                    } else {
+                        fullText += operatorsValue[2] + valueList[11]
+                    }
+                    isLeftParentClicked = true
+                }
+
             }
 
             R.id.buttonParentRight -> {
                 fullText += valueList[12]
-                if (isOperatorClicked) isOperatorClicked = false
+                if (isOperatorClicked) {
+                    isOperatorClicked = false
+                }
+                isLeftParentClicked = false
             }
 
 
@@ -345,6 +376,12 @@ class Calculator : Fragment(), OnClickListener {
 
             R.id.buttonBackspace -> {
                 fullText = fullText.dropLast(1)
+            }
+
+            R.id.buttonEquals -> {
+                makeResult()
+
+
             }
 
         }
