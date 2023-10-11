@@ -24,7 +24,7 @@ class Calculator : Fragment(), OnClickListener {
     private var fullText = ""
     private var isOperatorClicked = false
     private var isLeftParentClicked = false
-
+    private var isRightParentClicked = false
     private val initialValue = "0"
 
 
@@ -121,7 +121,7 @@ class Calculator : Fragment(), OnClickListener {
     }
 
     private fun makeResult() {
-        if(controlAllText(fullText)) {
+        if (controlAllText(fullText)) {
 
 
         }
@@ -131,8 +131,9 @@ class Calculator : Fragment(), OnClickListener {
     private fun updateResult() {
         resultTextView.text = resultText
     }
-    private fun controlAllText(fullText: String) : Boolean {
-        if(!controlParent(fullText)) {
+
+    private fun controlAllText(fullText: String): Boolean {
+        if (!controlParent(fullText)) {
             Toast.makeText(requireContext(), "Syntax Error", Toast.LENGTH_SHORT)
             return false
         }
@@ -141,7 +142,7 @@ class Calculator : Fragment(), OnClickListener {
         return true
     }
 
-    private fun controlParent(fullText:String) : Boolean {
+    private fun controlParent(fullText: String): Boolean {
         val stack = mutableListOf<Int>()
 
         for (i in fullText.indices) {
@@ -157,6 +158,7 @@ class Calculator : Fragment(), OnClickListener {
         }
         return stack.isEmpty()
     }
+
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.buttonNumber0 -> {
@@ -349,24 +351,39 @@ class Calculator : Fragment(), OnClickListener {
             }
 
             R.id.buttonParentLeft -> {
-                if(!isLeftParentClicked) {
-                    if (isOperatorClicked) {
-                        isOperatorClicked = false
-                        fullText += valueList[11]
-                    } else {
-                        fullText += operatorsValue[2] + valueList[11]
+                if (!clearCheck()) {
+                    if (!isLeftParentClicked) {
+                        if (isOperatorClicked) {
+                            isOperatorClicked = false
+                            fullText += valueList[11]
+                        } else {
+                            fullText += operatorsValue[2] + valueList[11]
+                        }
+                        isLeftParentClicked = true
                     }
-                    isLeftParentClicked = true
+                } else {
+                    if (!isLeftParentClicked) {
+                        fullText += valueList[11]
+                        isLeftParentClicked = true
+                    }
+
                 }
+
 
             }
 
             R.id.buttonParentRight -> {
-                fullText += valueList[12]
-                if (isOperatorClicked) {
-                    isOperatorClicked = false
+                if (isLeftParentClicked) {
+                    if (!isRightParentClicked) {
+                        fullText += valueList[12]
+                        if (isOperatorClicked) {
+                            isOperatorClicked = false
+                        }
+                        isLeftParentClicked = false
+                        isRightParentClicked = true
+
+                    }
                 }
-                isLeftParentClicked = false
             }
 
 
