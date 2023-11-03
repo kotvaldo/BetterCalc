@@ -1,15 +1,14 @@
 package com.example.bettercalc
 
-import android.app.Activity
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.bettercalc.databinding.ActivityMainBinding
 import com.example.bettercalc.fragments.Calculator
 import com.example.bettercalc.fragments.HistoryOfCalculator
 import com.example.bettercalc.fragments.MoreFunctions
 import com.example.bettercalc.fragments.ScientificFuntions
-import com.example.bettercalc.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {

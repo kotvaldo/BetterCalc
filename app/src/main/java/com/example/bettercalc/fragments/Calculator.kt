@@ -162,229 +162,37 @@ class Calculator : Fragment(), OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.buttonNumber0 -> {
-                if (!clearCheck()) {
-                    fullText += valueList[0]
-                }
+                if(!clearCheck())
+                    handleNumber(valueList[0])
             }
-
             R.id.buttonNumber00 -> {
-                if (!clearCheck()) {
-                    fullText += valueList[1]
-                }
-
+                if(!clearCheck())
+                    handleNumber(valueList[1])
             }
-
+            R.id.buttonNumber1 -> handleNumber(valueList[2])
+            R.id.buttonNumber2 -> handleNumber(valueList[3])
+            R.id.buttonNumber3 -> handleNumber(valueList[4])
+            R.id.buttonNumber4 -> handleNumber(valueList[5])
+            R.id.buttonNumber5 -> handleNumber(valueList[6])
+            R.id.buttonNumber6 -> handleNumber(valueList[7])
+            R.id.buttonNumber7 -> handleNumber(valueList[8])
+            R.id.buttonNumber8 -> handleNumber(valueList[9])
+            R.id.buttonNumber9 -> handleNumber(valueList[10])
+            R.id.buttonPlus -> handleOperator(operatorsValue[0])
+            R.id.buttonMinus -> handleOperator(operatorsValue[1])
+            R.id.buttonMult -> handleOperator(operatorsValue[2])
+            R.id.buttonDiv -> handleOperator(operatorsValue[3])
+            R.id.buttonPower -> handleOperator(operatorsValue[4])
+            R.id.buttonPerc -> handleOperator(operatorsValue[5])
+            R.id.buttonSqrt -> handleOperator(operatorsValue[6])
             R.id.buttonDot -> {
-                if (!clearCheck()) {
-                    if (!wasDotClicked && !isOperatorClicked) {
-                        fullText += valueList[13]
-                        wasDotClicked = true
-                    }
-                } else {
-                    fullText += "0" + valueList[13]
+                if (!wasDotClicked && !isOperatorClicked) {
+                    fullText += valueList[13]
                     wasDotClicked = true
                 }
-
             }
-
-            R.id.buttonNumber1 -> {
-                fullText += valueList[2]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber2 -> {
-                fullText += valueList[3]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber3 -> {
-                fullText += valueList[4]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber4 -> {
-                fullText += valueList[5]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber5 -> {
-                fullText += valueList[6]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber6 -> {
-                fullText += valueList[7]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber7 -> {
-                fullText += valueList[8]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber8 -> {
-                fullText += valueList[9]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-            R.id.buttonNumber9 -> {
-                fullText += valueList[10]
-                if (isOperatorClicked) isOperatorClicked = false
-                if (wasDotClicked) wasDotClicked = false
-            }
-
-
-            R.id.buttonPlus -> {
-                if (wasDotClicked) {
-                    fullText += "0"
-                    wasDotClicked = false
-                }
-                if (isOperatorClicked) {
-                    fullText = fullText.dropLast(1)
-                    fullText += operatorsValue[0]
-
-                } else {
-                    fullText += operatorsValue[0]
-                    isOperatorClicked = true
-                }
-
-            }
-
-            R.id.buttonMinus -> {
-                if (wasDotClicked) {
-                    fullText += "0"
-                    wasDotClicked = false
-                }
-                if (isOperatorClicked) {
-                    fullText = fullText.dropLast(1)
-                    fullText += operatorsValue[1]
-
-                } else {
-                    isOperatorClicked = true
-                    fullText += operatorsValue[1]
-                }
-
-            }
-
-            R.id.buttonMult -> {
-                if (wasDotClicked) {
-                    fullText += "0"
-                    wasDotClicked = false
-                }
-                if (isOperatorClicked) {
-                    fullText = fullText.dropLast(1)
-                    fullText += operatorsValue[2]
-
-                } else {
-                    isOperatorClicked = true
-                    fullText += operatorsValue[2]
-                }
-            }
-
-            R.id.buttonDiv -> {
-                if (wasDotClicked) {
-                    fullText += "0"
-                    wasDotClicked = false
-                }
-                if (isOperatorClicked) {
-                    fullText = fullText.dropLast(1)
-                    fullText += operatorsValue[3]
-
-                } else {
-                    isOperatorClicked = true
-                    fullText += operatorsValue[3]
-                }
-            }
-
-            R.id.buttonPower -> {
-                if (wasDotClicked) {
-                    fullText += "0"
-                    wasDotClicked = false
-                }
-                if (isOperatorClicked) {
-                    fullText = fullText.dropLast(1)
-                    fullText += operatorsValue[4]
-
-                } else {
-                    isOperatorClicked = true
-                    fullText += operatorsValue[4]
-                }
-            }
-
-            R.id.buttonPerc -> {
-                if (wasDotClicked) {
-                    fullText += "0"
-                    wasDotClicked = false
-                }
-                if (isOperatorClicked) {
-                    fullText = fullText.dropLast(1)
-                    fullText += operatorsValue[5]
-
-                } else {
-                    isOperatorClicked = true
-                    fullText += operatorsValue[5]
-                }
-            }
-
-            R.id.buttonSqrt -> {
-                if (wasDotClicked) {
-                    fullText += "0"
-                    wasDotClicked = false
-                }
-                if (isOperatorClicked) {
-                    fullText = fullText.dropLast(1)
-                    fullText += operatorsValue[6]
-
-                } else {
-                    isOperatorClicked = true
-                    fullText += operatorsValue[6]
-                }
-
-            }
-
-            R.id.buttonParentLeft -> {
-                if (!clearCheck()) {
-                    if (!isLeftParentClicked) {
-                        if (isOperatorClicked) {
-                            isOperatorClicked = false
-                            fullText += valueList[11]
-                        } else {
-                            fullText += operatorsValue[2] + valueList[11]
-                        }
-                        isLeftParentClicked = true
-                    }
-                } else {
-                    if (!isLeftParentClicked) {
-                        fullText += valueList[11]
-                        isLeftParentClicked = true
-                    }
-
-                }
-
-
-            }
-
-            R.id.buttonParentRight -> {
-                if (isLeftParentClicked) {
-                    if (!isRightParentClicked) {
-                        fullText += valueList[12]
-                        if (isOperatorClicked) {
-                            isOperatorClicked = false
-                        }
-                        isLeftParentClicked = false
-                        isRightParentClicked = true
-
-                    }
-                }
-            }
+            R.id.buttonParentLeft -> fullText += valueList[11]
+            R.id.buttonParentRight -> fullText += valueList[12]
 
 
             R.id.buttonClear -> {
@@ -404,4 +212,28 @@ class Calculator : Fragment(), OnClickListener {
         }
         updateDisplay()
     }
+
+    private fun handleOperator(operator: String) {
+        if (wasDotClicked) {
+            fullText += "0"
+            wasDotClicked = false
+        }
+        if (isOperatorClicked) {
+            fullText = fullText.dropLast(1)
+        } else {
+            isOperatorClicked = true
+        }
+        fullText += operator
+    }
+
+    private fun handleNumber(number: String) {
+        fullText += number
+        if (isOperatorClicked) {
+            isOperatorClicked = false
+        }
+        if (wasDotClicked) {
+            wasDotClicked = false
+        }
+    }
+
 }
