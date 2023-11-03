@@ -83,8 +83,6 @@ class Calculator : Fragment(), OnClickListener {
             "7",
             "8",
             "9",
-            "(",
-            ")",
             ".",
         )
 
@@ -187,13 +185,10 @@ class Calculator : Fragment(), OnClickListener {
             R.id.buttonSqrt -> handleOperator(operatorsValue[6])
             R.id.buttonDot -> {
                 if (!wasDotClicked && !isOperatorClicked) {
-                    fullText += valueList[13]
+                    fullText += valueList[11]
                     wasDotClicked = true
                 }
             }
-            R.id.buttonParentLeft -> fullText += valueList[11]
-            R.id.buttonParentRight -> fullText += valueList[12]
-
 
             R.id.buttonClear -> {
                 clearDisplay()
@@ -219,11 +214,11 @@ class Calculator : Fragment(), OnClickListener {
             wasDotClicked = false
         }
         if (isOperatorClicked) {
-            fullText = fullText.dropLast(1)
+            fullText = fullText.dropLast(2)
         } else {
             isOperatorClicked = true
         }
-        fullText += operator
+        fullText = fullText.trim() + " " + operator + " "
     }
 
     private fun handleNumber(number: String) {
@@ -235,5 +230,4 @@ class Calculator : Fragment(), OnClickListener {
             wasDotClicked = false
         }
     }
-
 }
